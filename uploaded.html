@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>文件上传</title>
+    <link rel="stylesheet" href="uploaded.css">
+</head>
+
+<body onresize="resize()">
+    <span class="bgimg"></span>
+    <div class="box">
+    <form action="uploaded.php" method="post" enctype="multipart/form-data">
+        <h4>文  件  上  传</h4>
+        <span class="span" id="span">未选择任何文件</span>
+        <input style="display: none" type="file" name="file" id="file" oninput="fi()">
+        <div class="fibox">
+            <label class="submit" for="file">上传文件</label>
+            <input class="submit" type="submit" name="submit" value="提交文件">
+        </div>
+    </form>
+    </div>
+</body>
+<script>
+    let resize = () => {
+    let X = window.innerWidth
+    let Y = window.innerHeight
+    if(X<Y){
+        document.getElementsByClassName('box')[0].style.margin=20+'vh auto'
+        document.getElementsByClassName('bgimg')[0].style.backgroundImage="url(https://pic1.imgdb.cn/item/67c73cfbd0e0a243d40bf019.jpg)"
+    }else{
+        document.getElementsByClassName('box')[0].style.margin=10+'vh auto'
+        document.getElementsByClassName('bgimg')[0].style.backgroundImage="url(https://pic1.imgdb.cn/item/67c73cfbd0e0a243d40bf01a.jpg)"
+    }
+};resize();
+    function fi(){
+        let url = document.getElementById('file').value
+        let urlname = url.split("\\").pop().split("/").pop()
+        let spaninn = document.getElementById('span')
+        spaninn.innerHTML = urlname
+        if(document.getElementById('span').scrollWidth>window.innerWidth * 0.65){
+        for(i=1;i<1000;i++){
+            let scrwid = document.getElementById('span').scrollWidth
+            let winwid = window.innerWidth * 0.65
+            if(scrwid>winwid){
+                spaninn.innerHTML = spaninn.innerHTML.slice(0, -1)
+            }else{
+                spaninn.innerHTML = spaninn.innerHTML.slice(0, -2)
+                let inhtml = spaninn.innerHTML.split(".")
+                inhtml.pop()
+                spaninn.innerHTML = inhtml+'···'
+                break
+            }
+        }
+        }
+    }
+</script>
+</html>
