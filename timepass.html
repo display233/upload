@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>临时密钥</title>
+    <link rel="stylesheet" href="uploaded.css">
+    <style>
+        .fibox{
+            width: 50rem;
+        }
+        .submit{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body onresize="resize()">
+    <span class="bgimg"></span>
+    <a class="dowup" href="uploaded.html">上传文件</a>
+    <div class="box">
+    <form action="timepass.php" method="post">
+        <h4>临  时  密  钥</h4>
+        <input class="span" type="text" name="pass" maxlength="20" placeholder="输入密钥" required>
+        <div class="fibox">
+            <input class="submit" type="submit" value="验证密钥">
+        </div>
+    </form>
+    </div>
+</body>
+<script>
+    let resize = () => {
+    let X = window.innerWidth
+    let Y = window.innerHeight
+    if(X<Y){
+        document.getElementsByClassName('box')[0].style.margin=20+'vh auto'
+        document.getElementsByClassName('bgimg')[0].style.backgroundImage="url(https://pic1.imgdb.cn/item/67c73cfbd0e0a243d40bf019.jpg)"
+    }else{
+        document.getElementsByClassName('box')[0].style.margin=10+'vh auto'
+        document.getElementsByClassName('bgimg')[0].style.backgroundImage="url(https://pic1.imgdb.cn/item/67c73cfbd0e0a243d40bf01a.jpg)"
+    }
+};resize();
+</script>
+</html>

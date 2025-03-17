@@ -142,3 +142,9 @@
 .right .fn a:hover {
     color: rgba(65, 125, 251, 1);
 }
+
+#button:disabled {
+    background-image: none;
+    background-color: rgba(158, 156, 160, 0.5);
+    color: rgba(246, 246, 246, 0.7);
+}

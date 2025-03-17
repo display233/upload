@@ -21,6 +21,20 @@ html{
     background-position: center center;
 }
 
+.dowup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30rem;
+    height: 10rem;
+    color: #f6f6f6;
+    background-image: linear-gradient(120deg, #8C41FB 0%, #71369C 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
+
 .box {
     display: flex;
     overflow: hidden;

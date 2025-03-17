@@ -7,10 +7,6 @@
     <title>神秘界面</title>
     <link rel="stylesheet" href="log_in.css">
     <style>
-        .box{
-            height: 75rem;
-            margin: 5vh auto;
-        }
         #tion{
             width: 50%;
         }
@@ -33,14 +29,12 @@
     <div class="box">
         <div class="left"></div>
         <div class="right">
-            <h4>注 册</h4>
-            <form action="register.php" method="post">
+            <h4>登 录</h4>
+            <form action="log_in.php" method="post">
                 <input name="mail" class="acc" type="email" maxlength="30" placeholder="电子邮箱" id="mailA" required>
                 <input name="tion" class="acc" type="text" maxlength="6" placeholder="验证码" id="tion" required>
                 <button id="button">获取验证码</button>
-                <input name="name" class="acc" type="text" maxlength="20" placeholder="用户名" required>
-                <input name="password" class="acc" type="password" maxlength="20" placeholder="密码" required>
-                <input class="submit" type="submit" maxlength="10" value="register">
+                <input class="submit" type="submit" maxlength="10" value="Login">
             </form>
             <form action="mail.php" method="post" target="rame" style="display:none">
                 <input name="mail" type="email" maxlength="30" id="mailB">
@@ -48,8 +42,8 @@
             </form>
             <iframe name="rame" style="display:none"></iframe>
             <div class="fn">
+                <a href="register.html">注册账号</a>
                 <a href="log_in.html">密码登录</a>
-                <a href="log_inB.html">验证码登录</a>
                 <a href="backpass.html">找回密码</a>
             </div>
         </div>
@@ -68,7 +62,7 @@
             document.getElementsByTagName('html')[0].style.fontSize=size*0.88+'vw'
         }
         document.getElementsByClassName('span')[0].style.height=0
-        document.getElementsByClassName('box')[0].style.margin=15+'vh auto'
+        document.getElementsByClassName('box')[0].style.margin=20+'vh auto'
         document.getElementsByClassName('box')[0].style.width=58.5+'rem'
         document.getElementsByClassName('left')[0].style.width=0
         document.getElementsByClassName('right')[0].style.width=100+'%'
@@ -81,7 +75,7 @@
             document.getElementsByTagName('html')[0].style.fontSize = 0.88 + 'vw'
         }
         document.getElementsByClassName('span')[0].style.height=100+'vh'
-        document.getElementsByClassName('box')[0].style.margin=5+'vh auto'
+        document.getElementsByClassName('box')[0].style.margin=10+'vh auto'
         document.getElementsByClassName('box')[0].style.width=90+'rem'
         document.getElementsByClassName('left')[0].style.width=35+'%'
         document.getElementsByClassName('right')[0].style.width=65+'%'
