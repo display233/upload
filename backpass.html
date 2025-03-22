@@ -62,10 +62,8 @@
     if(X<Y){
         if(X<=900){
             document.getElementsByTagName('html')[0].style.fontSize=size*1+'vw'
-        }else if(X>=1500){
-            document.getElementsByTagName('html')[0].style.fontSize=size*0.67+'vw'
         }else{
-            document.getElementsByTagName('html')[0].style.fontSize=size*0.88+'vw'
+            document.getElementsByTagName('html')[0].style.fontSize=size*0.67+'vw'
         }
         document.getElementsByClassName('span')[0].style.height=0
         document.getElementsByClassName('box')[0].style.margin=15+'vh auto'
@@ -73,13 +71,7 @@
         document.getElementsByClassName('left')[0].style.width=0
         document.getElementsByClassName('right')[0].style.width=100+'%'
     }else{
-        if (X <= 900) {
-            document.getElementsByTagName('html')[0].style.fontSize = 1 + 'vw'
-        } else if (X >= 1500) {
-            document.getElementsByTagName('html')[0].style.fontSize = 0.67 + 'vw'
-        } else {
-            document.getElementsByTagName('html')[0].style.fontSize = 0.88 + 'vw'
-        }
+        document.getElementsByTagName('html')[0].style.fontSize = 1.2 + 'vh'
         document.getElementsByClassName('span')[0].style.height=100+'vh'
         document.getElementsByClassName('box')[0].style.margin=5+'vh auto'
         document.getElementsByClassName('box')[0].style.width=90+'rem'

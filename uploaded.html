@@ -34,9 +34,11 @@
     let X = window.innerWidth
     let Y = window.innerHeight
     if(X<Y){
+        document.getElementsByTagName('html')[0].style.fontSize = 1 + 'vw'
         document.getElementsByClassName('box')[0].style.margin=20+'vh auto'
         document.getElementsByClassName('bgimg')[0].style.backgroundImage="url(https://pic1.imgdb.cn/item/67c73cfbd0e0a243d40bf019.jpg)"
     }else{
+        document.getElementsByTagName('html')[0].style.fontSize = 1.33 + 'vh'
         document.getElementsByClassName('box')[0].style.margin=10+'vh auto'
         document.getElementsByClassName('bgimg')[0].style.backgroundImage="url(https://pic1.imgdb.cn/item/67c73cfbd0e0a243d40bf01a.jpg)"
     }
